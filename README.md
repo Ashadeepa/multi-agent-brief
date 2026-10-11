@@ -14,8 +14,8 @@ one-page executive brief. Three LangChain chains run in sequence, each feeding t
 ```bash
 python3 -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
-export GEMINI_API_KEY=... SERP_API_KEY=...  # SERP_API_KEY optional (SerpAPI; else DuckDuckGo)
-#      # optional: GEMINI_MODEL (default gemini-3.6-flash)
+export GEMINI_API_KEY=...        # required (optional: GEMINI_MODEL, default gemini-3.6-flash)
+export SERP_API_KEY=...          # optional: SerpAPI search; falls back to DuckDuckGo
 streamlit run app.py             # dashboard
 python MAS_LangChain.py          # or run the backend from the CLI
 ```
